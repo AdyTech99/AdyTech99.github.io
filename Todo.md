@@ -1,15 +1,9 @@
-change nav bg to image w/ blur - low 
-
-search icon on all projects make it black - low
-
-bg to selected proj section - high
-
-My experience text and code img - high
-
-black bar on top of farlands reborn popular mod section - med
-
-shapes in all projects area -  med (time consuming)
-
-footer links - high
-
-custom cursor - high
+- Change Navigation Background to Image with Blur - Low
+- Change Search Icon on All Projects to Black - Low
+- Change Background of Selected Project Section - High
+- Add "My Experience" Text and Code Image - High
+- Add Black Bar on Top of Farlands Reborn Popular Mod Section - Medium
+- Add Shapes in All Projects Area - Medium (Time Consuming)
+- Update Footer Links - High
+- Implement Custom Cursor - High
+- Change "The Adytech99" to "AdyTech99" - High
