@@ -1,7 +1,7 @@
 // Define the base URL and path parameters
-const baseUrl = 'https://api.modrinth.com';
+const baseUrl = 'https://api.modrinth.com/v2';
 const endpoint = '/project';
-const itemId = "/nodurability"; // Example path parameter
+const itemId = "/htkVd6dQ"; // Example path parameter
 
 const url = `${baseUrl}${endpoint}${itemId}`;
 
