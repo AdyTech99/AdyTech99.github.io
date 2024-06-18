@@ -97,7 +97,10 @@
     pointer-events: none;
     mix-blend-mode: difference;
 }
-
+#plswork {
+    -webkit-filter: invert(1);
+    filter: invert(1);
+}
 *,
 *::before,
 *::after {
