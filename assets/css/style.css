@@ -97,7 +97,33 @@
     pointer-events: none;
     mix-blend-mode: difference;
 }
+#plswork {
+    -webkit-filter: invert(1);
+    filter: invert(1);
+}
+video {
+    display: block;
+    height: auto;
+    margin: auto;
+    position: relative;
+    width: 100%;
+}
 
+.video-wrap {
+    margin: 0 auto;
+    position: relative;
+    width: 90%;
+}
+
+.video-wrap:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
 *,
 *::before,
 *::after {
@@ -1587,11 +1613,16 @@ textarea.input-field {
   #BACK TO TOP
 \*-----------------------------------*/
 
+#topper {
+    rotate: 115deg;
+}
+
 .back-top-btn {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: var(--gold-crayola);
+    bottom: 25px;
+    right: 25px;
+    background-color: var(--smoky-black-1);
+    border: 3px solid var(--gold-crayola);
     color: var(--smoky-black-1);
     font-size: 22px;
     width: 50px;
@@ -1608,9 +1639,10 @@ textarea.input-field {
 
 .back-top-btn:is(:hover,
  :focus-visible) {
-    background-color: var(--white);
+    background-color: var(--gold-crayola);
     color: var(--gold-crayola);
 }
+
 
 .back-top-btn.active {
     opacity: 1;
