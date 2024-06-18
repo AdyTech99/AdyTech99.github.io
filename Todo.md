@@ -6,3 +6,4 @@
 - Add Shapes in All Projects Area - Medium (Time Consuming)
 - Change "The Adytech99" to "AdyTech99" - High
 - make a tags target="_blank" - Medium
+- Add hyperlink to mods when clicked on - High
