@@ -84,6 +84,19 @@
 /*-----------------------------------*\
   #RESET
 \*-----------------------------------*/
+#blob {
+    width: 30px;
+    height: 30px;
+    border: 5px solid #fed800;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%;
+    border-radius: 50%;
+    z-index: 9;
+    pointer-events: none;
+    mix-blend-mode: difference;
+}
 
 *,
 *::before,
