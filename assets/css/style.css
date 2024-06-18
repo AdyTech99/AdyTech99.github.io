@@ -101,6 +101,29 @@
     -webkit-filter: invert(1);
     filter: invert(1);
 }
+video {
+    display: block;
+    height: auto;
+    margin: auto;
+    position: relative;
+    width: 100%;
+}
+
+.video-wrap {
+    margin: 0 auto;
+    position: relative;
+    width: 90%;
+}
+
+.video-wrap:after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
 *,
 *::before,
 *::after {
