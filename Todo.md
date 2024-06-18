@@ -1,7 +1,6 @@
 - Change Navigation Background to Image with Blur - Low
 - Change Background of Selected Project Section - High
 - Add "My Experience" Text - High
-- Remove Black Bar on Top of Farlands Reborn Popular Mod Section - Medium
 - Add Shapes in All Projects Area - Medium (Time Consuming)
 - Change "The Adytech99" to "AdyTech99" - High
 - make a tags target="_blank" - Medium
