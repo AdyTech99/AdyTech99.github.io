@@ -9,6 +9,9 @@ window.onpointermove = event => {
     }, { duration: 300, fill: "forwards" });
 }
 
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(navigator.userAgent)) {
+    jQuery('#blob').remove();
+}
 
 
 
