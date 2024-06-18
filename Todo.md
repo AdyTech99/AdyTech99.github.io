@@ -4,6 +4,5 @@
 - Add "My Experience" Text and Code Image - High
 - Add Black Bar on Top of Farlands Reborn Popular Mod Section - Medium
 - Add Shapes in All Projects Area - Medium (Time Consuming)
-- Update Footer Links - High
-- Implement Custom Cursor - High
 - Change "The Adytech99" to "AdyTech99" - High
+- make a tags target="_blank" - Medium
