@@ -10,8 +10,8 @@ window.onpointermove = event => {
 }
 
 if (/Android|webOS|iPhone|macOS|iPad|iPod|BlackBerry|Windows Phone/i.test(navigator.userAgent)) {
-    jQuery('blob').remove();
     blob.remove();
+    console.log(REmoved)
 }
 
 window.addEventListener('load', videoScroll);
