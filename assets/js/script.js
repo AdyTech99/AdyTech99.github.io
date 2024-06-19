@@ -17,7 +17,7 @@ function isMacOS() {
 if (isMacOS()) {
     var styleElement = document.getElementById('blob');
     if (styleElement) {
-        styleElement.innerHTML = '';
+        styleElement.remove()
     }
 }
 
