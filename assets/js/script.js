@@ -11,7 +11,7 @@ window.onpointermove = event => {
 
 if (/Android|webOS|iPhone|macOS|iPad|iPod|BlackBerry|Windows Phone/i.test(navigator.userAgent)) {
     jQuery('blob').remove();
-    div.parentNode.removeChild(blob);
+    blob.remove();
 }
 
 window.addEventListener('load', videoScroll);
