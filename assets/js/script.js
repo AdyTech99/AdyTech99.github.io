@@ -9,9 +9,16 @@ window.onpointermove = event => {
     }, { duration: 300, fill: "forwards" });
 }
 
-if (/Android|webOS|iPhone|macOS|iPad|iPod|BlackBerry|Windows Phone/i.test(navigator.userAgent)) {
-    blob.remove();
-    console.log(REmoved)
+function isMacOS() {
+    return navigator.platform.toUpperCase().indexOf('MAC') >= 0;
+}
+
+// Remove the custom cursor style if the user is on macOS
+if (isMacOS()) {
+    var styleElement = document.getElementById('blob');
+    if (styleElement) {
+        styleElement.innerHTML = '';
+    }
 }
 
 window.addEventListener('load', videoScroll);
