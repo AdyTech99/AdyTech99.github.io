@@ -9,8 +9,8 @@ window.onpointermove = event => {
     }, { duration: 300, fill: "forwards" });
 }
 
-if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(navigator.userAgent)) {
-    jQuery('#blob').remove();
+if (/Android|webOS|iPhone|macOS|iPad|iPod|BlackBerry|Windows Phone/i.test(navigator.userAgent)) {
+    jQuery('blob').remove();
 }
 
 window.addEventListener('load', videoScroll);
