@@ -84,6 +84,7 @@
 /*-----------------------------------*\
   #RESET
 \*-----------------------------------*/
+
 #blob {
     width: 30px;
     height: 30px;
@@ -97,10 +98,12 @@
     pointer-events: none;
     mix-blend-mode: difference;
 }
+
 #plswork {
     -webkit-filter: invert(1);
     filter: invert(1);
 }
+
 video {
     display: block;
     height: auto;
@@ -124,6 +127,7 @@ video {
     top: 50%;
     transform: translate(-50%, -50%);
 }
+
 *,
 *::before,
 *::after {
@@ -1061,7 +1065,7 @@ body.nav-active {
     transform: translateX(-50%);
     width: 140px;
     height: 100%;
-    background-image: url('../images/img-pattern.svg');
+    background-image: url('../images/img_sep.webp');
     background-position: center;
     background-size: cover;
     background-repeat: repeat;
@@ -1642,7 +1646,6 @@ textarea.input-field {
     background-color: var(--gold-crayola);
     color: var(--gold-crayola);
 }
-
 
 .back-top-btn.active {
     opacity: 1;
