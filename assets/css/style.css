@@ -1065,7 +1065,6 @@ body.nav-active {
     transform: translateX(-50%);
     width: 140px;
     height: 100%;
-    background-image: url('../images/img_sep.webp');
     background-position: center;
     background-size: cover;
     transition: var(--transition-2);
