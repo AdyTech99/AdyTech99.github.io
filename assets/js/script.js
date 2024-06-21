@@ -8,6 +8,9 @@ window.onpointermove = event => {
         top: `${pageY}px`
     }, { duration: 300, fill: "forwards" });
 }
+if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(navigator.userAgent)) {
+    $('remover').remove();
+}
 
 function isMacOS() {
     return navigator.platform.toUpperCase().indexOf('MAC') >= 0;
