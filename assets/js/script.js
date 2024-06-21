@@ -1,5 +1,6 @@
 'use strict';
 const blob = document.getElementById("blob");
+const remover = document.getElementById("remover")
 window.onpointermove = event => {
     const { pageX, pageY } = event;
 
@@ -9,7 +10,7 @@ window.onpointermove = event => {
     }, { duration: 300, fill: "forwards" });
 }
 if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|Windows Phone/i.test(navigator.userAgent)) {
-    $('remover').remove();
+    remover.remove();
 }
 
 function isMacOS() {
