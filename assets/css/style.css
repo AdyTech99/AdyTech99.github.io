@@ -1068,7 +1068,6 @@ body.nav-active {
     background-image: url('../images/img_sep.webp');
     background-position: center;
     background-size: cover;
-    background-repeat: repeat;
     transition: var(--transition-2);
     transition-delay: 0;
     z-index: -1;
