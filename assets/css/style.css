@@ -752,6 +752,7 @@ body.nav-active {
 
 .navbar {
     position: fixed;
+    background-color: var(--smoky-black-1);
     top: 0;
     left: -360px;
     bottom: 0;
@@ -877,6 +878,7 @@ body.nav-active {
 
 .overlay {
     position: fixed;
+    background-color: var(--black-alpha-80);
     top: 0;
     left: 0;
     bottom: 0;
@@ -888,7 +890,7 @@ body.nav-active {
 }
 
 .overlay.active {
-    opacity: .6;
+    opacity: 1;
     pointer-events: all;
 }
 
