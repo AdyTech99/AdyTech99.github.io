@@ -1,6 +1,5 @@
 'use strict';
 const blob = document.getElementById("blob");
-var remover = document.getElementById("remover")
 window.onpointermove = event => {
     const { pageX, pageY } = event;
 
@@ -10,9 +9,6 @@ window.onpointermove = event => {
     }, { duration: 300, fill: "forwards" });
 }
 
-function isMobileDevice() {
-    return /Mobi|Android/i.test(navigator.userAgent);
-}
 
 function isMacOS() {
     return navigator.platform.toUpperCase().indexOf('MAC') >= 0;
@@ -25,9 +21,14 @@ if (isMacOS()) {
     }
 }
 
+function isMobileDevice() {
+    return /Mobi|Android/i.test(navigator.userAgent);
+}
+
 if (isMobileDevice()) {
-    if (remover) {
-        remover.remove()
+    var styleElement = document.getElementById('remover');
+    if (styleElement) {
+        styleElement.remove()
     }
 }
 
