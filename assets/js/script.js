@@ -16,8 +16,12 @@ function isMacOS() {
 
 if (isMacOS()) {
     var styleElement = document.getElementById('blob');
+    var styleElements = document.getElementsByClassName('hiiii')
     if (styleElement) {
         styleElement.remove()
+    }
+    if (styleElements) {
+        styleElements.remove()
     }
 }
 
