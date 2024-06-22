@@ -1,6 +1,6 @@
 'use strict';
 const blob = document.getElementById("blob");
-const remover = document.getElementById("remover")
+var remover = document.getElementById("remover")
 window.onpointermove = event => {
     const { pageX, pageY } = event;
 
@@ -10,17 +10,27 @@ window.onpointermove = event => {
     }, { duration: 300, fill: "forwards" });
 }
 
+function isMobileDevice() {
+    return /Mobi|Android/i.test(navigator.userAgent);
+}
+
 function isMacOS() {
     return navigator.platform.toUpperCase().indexOf('MAC') >= 0;
 }
 
-// Remove the custom cursor style if the user is on macOS
 if (isMacOS()) {
     var styleElement = document.getElementById('blob');
     if (styleElement) {
         styleElement.remove()
     }
 }
+
+if (isMobileDevice()) {
+    if (remover) {
+        remover.remove()
+    }
+}
+
 
 window.addEventListener('load', videoScroll);
 window.addEventListener('scroll', videoScroll);
