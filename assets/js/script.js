@@ -9,6 +9,18 @@ window.onpointermove = event => {
     }, { duration: 300, fill: "forwards" });
 }
 
+function isMacOS() {
+    return navigator.platform.toUpperCase().indexOf('MAC') >= 0;
+}
+
+if (isMacOS()) {
+    var styleElement = document.getElementById('blob');
+    var styleElementaa = document.getElementsByClassName('hanger')
+    if (styleElement) {
+        styleElement.remove()
+        styleElementaa.remove()
+    }
+}
 
 function isMobileDevice() {
     return /Mobi|Android/i.test(navigator.userAgent);
