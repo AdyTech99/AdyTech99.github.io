@@ -35,9 +35,9 @@ if (isMobileDevice()) {
     elements.forEach(function(element) {
         element.parentNode.removeChild(element);
     });
-    blob.remove()
-    var bottomtext = document.querySelector(".footer-bottom")
-    bottomtext.style.marginTop = '-240px'
+    blob.remove();
+    var bottomtext = document.querySelector(".footer-bottom");
+    bottomtext.style.marginTop = '-240px';
 }
 
 
