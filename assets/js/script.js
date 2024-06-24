@@ -15,10 +15,8 @@ function isMacOS() {
 
 if (isMacOS()) {
     var styleElement = document.getElementById('blob');
-    var styleElementaa = document.getElementsByClassName('hanger')
     if (styleElement) {
         styleElement.remove()
-        styleElementaa.remove()
     }
 }
 
