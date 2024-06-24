@@ -2,8 +2,8 @@ const AIEpopup = new Popup({
     id: "download",
     title: "Find it on",
     content: `
-         {a-https://modrinth.com/mod/automatic-infinite-elytra}[Modrinth download link]
-         {a-https://www.curseforge.com/minecraft/mc-mods/automatic-infinite-elytra}[Curseforge download link]
+         {a-https://modrinth.com/mod/automatic-infinite-elytra}[Open in Modrinth]
+         {a-https://www.curseforge.com/minecraft/mc-mods/automatic-infinite-elytra}[Open in CurseForge]
         `,
     backgroundColor: "#000",
     font: "DM Sans",
@@ -28,8 +28,8 @@ const AIEEEpopup = new Popup({
     id: "download",
     title: "Find it on",
     content: `
-         {a-https://modrinth.com/mod/automatic-infinite-elytra}[Modrinth download link]
-         {a-https://www.curseforge.com/minecraft/mc-mods/automatic-infinite-elytra}[Curseforge download link]
+         {a-https://modrinth.com/mod/automatic-infinite-elytra}[Open in Modrinth]
+         {a-https://www.curseforge.com/minecraft/mc-mods/automatic-infinite-elytra}[Open in CurseForge]
         `,
     backgroundColor: "#000",
     font: "DM Sans",
@@ -55,8 +55,8 @@ const HIpopup = new Popup({
     id: "download",
     title: "Find it on",
     content: `
-         {a-https://modrinth.com/mod/playerhealthindicators}[Modrinth download link]
-         {a-https://www.curseforge.com/minecraft/mc-mods/player-health-indicators}[Curseforge download link]
+         {a-https://modrinth.com/mod/playerhealthindicators}[Open in Modrinth]
+         {a-https://www.curseforge.com/minecraft/mc-mods/player-health-indicators}[Open in CurseForge]
         `,
     backgroundColor: "#000",
     font: "DM Sans",
@@ -82,8 +82,8 @@ const HIIIpopup = new Popup({
     id: "download",
     title: "Find it on",
     content: `
-         {a-https://modrinth.com/mod/playerhealthindicators}[Modrinth download link]
-         {a-https://www.curseforge.com/minecraft/mc-mods/player-health-indicators}[Curseforge download link]
+         {a-https://modrinth.com/mod/playerhealthindicators}[Open in Modrinth]
+         {a-https://www.curseforge.com/minecraft/mc-mods/player-health-indicators}[Open in CurseForge]
         `,
     backgroundColor: "#000",
     font: "DM Sans",
@@ -109,8 +109,8 @@ const Fpopup = new Popup({
     id: "download",
     title: "Find it on",
     content: `
-         {a-https://modrinth.com/mod/modern-farlands-mod}[Modrinth download link]
-         {a-https://www.curseforge.com/minecraft/mc-mods/farlands-reborn}[Curseforge download link]
+         {a-https://modrinth.com/mod/modern-farlands-mod}[Open in Modrinth]
+         {a-https://www.curseforge.com/minecraft/mc-mods/farlands-reborn}[Open in CurseForge]
         `,
     backgroundColor: "#000",
     font: "DM Sans",
@@ -136,8 +136,8 @@ const FFpopup = new Popup({
     id: "download",
     title: "Find it on",
     content: `
-         {a-https://modrinth.com/mod/modern-farlands-mod}[Modrinth download link]
-         {a-https://www.curseforge.com/minecraft/mc-mods/farlands-reborn}[Curseforge download link]
+         {a-https://modrinth.com/mod/modern-farlands-mod}[Open in Modrinth]
+         {a-https://www.curseforge.com/minecraft/mc-mods/farlands-reborn}[Open in CurseForge]
         `,
     backgroundColor: "#000",
     font: "DM Sans",
@@ -163,8 +163,8 @@ const Npopup = new Popup({
     id: "download",
     title: "Find it on",
     content: `
-         {a-https://modrinth.com/mod/nodurability}[Modrinth download link]
-         {a-https://www.curseforge.com/minecraft/mc-mods/no-durability}[Curseforge download link]
+         {a-https://modrinth.com/mod/nodurability}[Open in Modrinth]
+         {a-https://www.curseforge.com/minecraft/mc-mods/no-durability}[Open in CurseForge]
         `,
     backgroundColor: "#000",
     font: "DM Sans",
@@ -190,8 +190,8 @@ const HBpopup = new Popup({
     id: "download",
     title: "Find it on",
     content: `
-         {a-https://modrinth.com/mod/homeward-bound}[Modrinth download link]
-         {a-https://www.curseforge.com/minecraft/mc-mods/homeward-bound}[Curseforge download link]
+         {a-https://modrinth.com/mod/homeward-bound}[Open in Modrinth]
+         {a-https://www.curseforge.com/minecraft/mc-mods/homeward-bound}[Open in CurseForge]
         `,
     backgroundColor: "#000",
     font: "DM Sans",
