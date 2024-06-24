@@ -20,6 +20,8 @@ if (isMacOS()) {
         styleElement.remove()
         styleElementaa.remove()
     }
+    var removerrr = document.querySelector(".centerrer")
+    removerrr.style.marginTop = '20%'
 }
 
 function isMobileDevice() {
