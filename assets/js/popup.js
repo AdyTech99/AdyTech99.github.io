@@ -1,6 +1,6 @@
 const AIEpopup = new Popup({
     id: "download",
-    title: "Download Instructions",
+    title: "Find it on",
     content: `
          {a-https://modrinth.com/mod/automatic-infinite-elytra}[Modrinth download link]
          {a-https://www.curseforge.com/minecraft/mc-mods/automatic-infinite-elytra}[Curseforge download link]
@@ -26,7 +26,7 @@ const AIEpopup = new Popup({
 });
 const AIEEEpopup = new Popup({
     id: "download",
-    title: "Download Instructions",
+    title: "Find it on",
     content: `
          {a-https://modrinth.com/mod/automatic-infinite-elytra}[Modrinth download link]
          {a-https://www.curseforge.com/minecraft/mc-mods/automatic-infinite-elytra}[Curseforge download link]
@@ -53,7 +53,7 @@ const AIEEEpopup = new Popup({
 
 const HIpopup = new Popup({
     id: "download",
-    title: "Download Instructions",
+    title: "Find it on",
     content: `
          {a-https://modrinth.com/mod/playerhealthindicators}[Modrinth download link]
          {a-https://www.curseforge.com/minecraft/mc-mods/player-health-indicators}[Curseforge download link]
@@ -80,7 +80,7 @@ const HIpopup = new Popup({
 
 const HIIIpopup = new Popup({
     id: "download",
-    title: "Download Instructions",
+    title: "Find it on",
     content: `
          {a-https://modrinth.com/mod/playerhealthindicators}[Modrinth download link]
          {a-https://www.curseforge.com/minecraft/mc-mods/player-health-indicators}[Curseforge download link]
@@ -107,7 +107,7 @@ const HIIIpopup = new Popup({
 
 const Fpopup = new Popup({
     id: "download",
-    title: "Download Instructions",
+    title: "Find it on",
     content: `
          {a-https://modrinth.com/mod/modern-farlands-mod}[Modrinth download link]
          {a-https://www.curseforge.com/minecraft/mc-mods/farlands-reborn}[Curseforge download link]
@@ -134,7 +134,7 @@ const Fpopup = new Popup({
 
 const FFpopup = new Popup({
     id: "download",
-    title: "Download Instructions",
+    title: "Find it on",
     content: `
          {a-https://modrinth.com/mod/modern-farlands-mod}[Modrinth download link]
          {a-https://www.curseforge.com/minecraft/mc-mods/farlands-reborn}[Curseforge download link]
@@ -161,7 +161,7 @@ const FFpopup = new Popup({
 
 const Npopup = new Popup({
     id: "download",
-    title: "Download Instructions",
+    title: "Find it on",
     content: `
          {a-https://modrinth.com/mod/nodurability}[Modrinth download link]
          {a-https://www.curseforge.com/minecraft/mc-mods/no-durability}[Curseforge download link]
@@ -188,7 +188,7 @@ const Npopup = new Popup({
 
 const HBpopup = new Popup({
     id: "download",
-    title: "Download Instructions",
+    title: "Find it on",
     content: `
          {a-https://modrinth.com/mod/homeward-bound}[Modrinth download link]
          {a-https://www.curseforge.com/minecraft/mc-mods/homeward-bound}[Curseforge download link]
@@ -215,7 +215,7 @@ const HBpopup = new Popup({
 
 const MCpopup = new Popup({
     id: "download",
-    title: "Download Instructions",
+    title: "Find it on",
     content: `
          {a-https://modrinth.com/mod/minecraft-manhunt-compass}[Modrinth download link]
          {a-https://www.curseforge.com/minecraft/mc-mods/minecraft-manhunt-compass}[Curseforge download link]
@@ -236,6 +236,33 @@ const MCpopup = new Popup({
         const button = document.getElementById("MC")
         button.addEventListener("click", () => {
             MCpopup.show();
+        });
+    },
+});
+
+const Genpopup = new Popup({
+    id: "download",
+    title: "Find them on",
+    content: `
+         {a-https://modrinth.com/user/AdyTech99}[Modrinth link]
+         {a-https://www.curseforge.com/members/adytech99/projects}[Curseforge link]
+        `,
+    backgroundColor: "#000",
+    font: "DM Sans",
+    titleColor: "#fed800",
+    textColor: "#fed800",
+    closeColor: "#fed800",
+    borderWidth: ".2em",
+    borderColor: "#fed800",
+    linkColor: "#fed800",
+    borderRadius: 7,
+    fontSizeMultiplier: 1.2,
+    titleMargin: "4%",
+    underlineLinks: true,
+    loadCallback: () => {
+        const button = document.getElementById("Gen")
+        button.addEventListener("click", () => {
+            Genpopup.show();
         });
     },
 });
