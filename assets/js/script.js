@@ -21,7 +21,7 @@ if (isMacOS()) {
         styleElementaa.remove()
     }
     var removerrr = document.querySelector(".centerrer")
-    removerrr.style.marginTop = '20%'
+    removerrr.style.marginTop = '100px'
 }
 
 function isMobileDevice() {
