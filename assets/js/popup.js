@@ -244,8 +244,8 @@ const Genpopup = new Popup({
     id: "download",
     title: "My mods",
     content: `
-         {a-https://modrinth.com/user/AdyTech99}[Modrinth]
-         {a-https://www.curseforge.com/members/adytech99/projects}[CurseForge]
+         {a-https://modrinth.com/user/AdyTech99}[View on Modrinth]
+         {a-https://www.curseforge.com/members/adytech99/projects}[View on CurseForge]
         `,
     backgroundColor: "#000",
     font: "DM Sans",
