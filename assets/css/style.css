@@ -368,11 +368,14 @@ body.nav-active {
 }
 
 .section-subtitle::after {
-    content: url('../images/separator.svg');
+    content: url('../images/seperator.webp');
+    rotate: 90deg;
     display: block;
+    scale: 40%;
     width: 100px;
     margin-inline: auto;
-    margin-block-start: 5px;
+    margin-top: -210px;
+    margin-bottom: -110px;
 }
 
 .btn {
