@@ -22,6 +22,8 @@ if (isMacOS()) {
     }
     var removerrr = document.querySelector(".centerrer")
     removerrr.style.marginTop = '-300px'
+    var bottomtext = document.querySelector(".footer-bottom")
+    bottomtext.style.marginTop = '-240px'
 }
 
 function isMobileDevice() {
