@@ -1,6 +1,6 @@
 const AIEpopup = new Popup({
     id: "download",
-    title: "Download Automatic Infinite Elytra",
+    title: "Automatic Infinite Elytra",
     content: `
          {a-https://modrinth.com/mod/automatic-infinite-elytra}[Open in Modrinth]
          {a-https://www.curseforge.com/minecraft/mc-mods/automatic-infinite-elytra}[Open in CurseForge]
@@ -26,7 +26,7 @@ const AIEpopup = new Popup({
 });
 const AIEEEpopup = new Popup({
     id: "download",
-    title: "Download Automatic Infinite Elytra",
+    title: "Automatic Infinite Elytra",
     content: `
          {a-https://modrinth.com/mod/automatic-infinite-elytra}[Open in Modrinth]
          {a-https://www.curseforge.com/minecraft/mc-mods/automatic-infinite-elytra}[Open in CurseForge]
@@ -53,7 +53,7 @@ const AIEEEpopup = new Popup({
 
 const HIpopup = new Popup({
     id: "download",
-    title: "Download Health Indicators",
+    title: "Health Indicators",
     content: `
          {a-https://modrinth.com/mod/health-indicators}[Open in Modrinth]
          {a-https://www.curseforge.com/minecraft/mc-mods/health-indicator}[Open in CurseForge]
@@ -80,7 +80,7 @@ const HIpopup = new Popup({
 
 const HIIIpopup = new Popup({
     id: "download",
-    title: "Download Health Indicators",
+    title: "Health Indicators",
     content: `
          {a-https://modrinth.com/mod/health-indicators}[Open in Modrinth]
           {a-https://www.curseforge.com/minecraft/mc-mods/health-indicator}[Open in CurseForge]
@@ -107,7 +107,7 @@ const HIIIpopup = new Popup({
 
 const Fpopup = new Popup({
     id: "download",
-    title: "Download Farlands Reborn",
+    title: "Farlands Reborn",
     content: `
          {a-https://modrinth.com/mod/modern-farlands-mod}[Open in Modrinth]
          {a-https://www.curseforge.com/minecraft/mc-mods/farlands-reborn}[Open in CurseForge]
@@ -134,7 +134,7 @@ const Fpopup = new Popup({
 
 const FFpopup = new Popup({
     id: "download",
-    title: "Download Farlands Reborn",
+    title: "Farlands Reborn",
     content: `
          {a-https://modrinth.com/mod/modern-farlands-mod}[Open in Modrinth]
          {a-https://www.curseforge.com/minecraft/mc-mods/farlands-reborn}[Open in CurseForge]
@@ -161,7 +161,7 @@ const FFpopup = new Popup({
 
 const Npopup = new Popup({
     id: "download",
-    title: "Download No Durability",
+    title: "No Durability",
     content: `
          {a-https://modrinth.com/mod/nodurability}[Open in Modrinth]
          {a-https://www.curseforge.com/minecraft/mc-mods/no-durability}[Open in CurseForge]
@@ -188,7 +188,7 @@ const Npopup = new Popup({
 
 const HBpopup = new Popup({
     id: "download",
-    title: "Download Homeward Bound",
+    title: "Homeward Bound",
     content: `
          {a-https://modrinth.com/mod/homeward-bound}[Open in Modrinth]
          {a-https://www.curseforge.com/minecraft/mc-mods/homeward-bound}[Open in CurseForge]
@@ -215,7 +215,7 @@ const HBpopup = new Popup({
 
 const MCpopup = new Popup({
     id: "download",
-    title: "Download Manhunt Compass",
+    title: "Manhunt Compass",
     content: `
          {a-https://modrinth.com/mod/minecraft-manhunt-compass}[Open with Modrinth]
          {a-https://www.curseforge.com/minecraft/mc-mods/minecraft-manhunt-compass}[Open with CurseForge]
@@ -242,7 +242,7 @@ const MCpopup = new Popup({
 
 const Genpopup = new Popup({
     id: "download",
-    title: "My mods",
+    title: "All my mods",
     content: `
          {a-https://modrinth.com/user/AdyTech99}[View on Modrinth]
          {a-https://www.curseforge.com/members/adytech99/projects}[View on CurseForge]
