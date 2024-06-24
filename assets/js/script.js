@@ -9,7 +9,6 @@ window.onpointermove = event => {
     }, { duration: 300, fill: "forwards" });
 }
 
-
 function isMacOS() {
     return navigator.platform.toUpperCase().indexOf('MAC') >= 0;
 }
