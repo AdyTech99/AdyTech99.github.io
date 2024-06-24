@@ -25,10 +25,10 @@ function isMobileDevice() {
 }
 
 if (isMobileDevice()) {
-    var styleElement = document.getElementById('remover');
-    if (styleElement) {
-        styleElement.remove()
-    }
+    var elements = document.querySelectorAll('.remover');
+    elements.forEach(function(element) {
+        element.parentNode.removeChild(element);
+    });
 }
 
 
