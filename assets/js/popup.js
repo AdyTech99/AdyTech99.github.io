@@ -217,8 +217,8 @@ const MCpopup = new Popup({
     id: "download",
     title: "Find it on",
     content: `
-         {a-https://modrinth.com/mod/minecraft-manhunt-compass}[Modrinth download link]
-         {a-https://www.curseforge.com/minecraft/mc-mods/minecraft-manhunt-compass}[Curseforge download link]
+         {a-https://modrinth.com/mod/minecraft-manhunt-compass}[Open with Modrinth]
+         {a-https://www.curseforge.com/minecraft/mc-mods/minecraft-manhunt-compass}[Open with CurseForge]
         `,
     backgroundColor: "#000",
     font: "DM Sans",
@@ -244,8 +244,8 @@ const Genpopup = new Popup({
     id: "download",
     title: "Find them on",
     content: `
-         {a-https://modrinth.com/user/AdyTech99}[Modrinth link]
-         {a-https://www.curseforge.com/members/adytech99/projects}[Curseforge link]
+         {a-https://modrinth.com/user/AdyTech99}[Modrinth]
+         {a-https://www.curseforge.com/members/adytech99/projects}[CurseForge]
         `,
     backgroundColor: "#000",
     font: "DM Sans",
