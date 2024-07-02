@@ -266,3 +266,30 @@ const Genpopup = new Popup({
         });
     },
 });
+
+const Gen2popup = new Popup({
+    id: "download",
+    title: "All my mods",
+    content: `
+         {a-https://modrinth.com/user/AdyTech99}[View on Modrinth]
+         {a-https://www.curseforge.com/members/adytech99/projects}[View on CurseForge]
+        `,
+    backgroundColor: "#000",
+    font: "DM Sans",
+    titleColor: "#fed800",
+    textColor: "#fed800",
+    closeColor: "#fed800",
+    borderWidth: ".2em",
+    borderColor: "#fed800",
+    linkColor: "#fed800",
+    borderRadius: 7,
+    fontSizeMultiplier: 1.2,
+    titleMargin: "4%",
+    underlineLinks: true,
+    loadCallback: () => {
+        const button = document.getElementById("Gen2")
+        button.addEventListener("click", () => {
+            Gen2popup.show();
+        });
+    },
+});
