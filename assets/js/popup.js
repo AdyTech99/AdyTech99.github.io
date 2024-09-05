@@ -164,7 +164,7 @@ const Npopup = new Popup({
     title: "No Durability",
     content: `
          {a-https://modrinth.com/mod/nodurability}[Open in Modrinth]
-         {a-https://www.curseforge.com/minecraft/mc-mods/no-durability}[Open in CurseForge]
+         {a-https://www.curseforge.com/minecraft/mc-mods/nodurability}[Open in CurseForge]
         `,
     backgroundColor: "#000",
     font: "DM Sans",
