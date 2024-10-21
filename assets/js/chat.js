@@ -2,6 +2,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const chatMessages = document.getElementById('chat-messages');
     const userInput = document.getElementById('user-input');
     const sendButton = document.getElementById('send-button');
+
+    addMessage('system', "Starting")
+
     const apiKey = process.env.MISTRAL_API_KEY; // Replace with your actual API key
 
     addMessage('system', "Initialized")
