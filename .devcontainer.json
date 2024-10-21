@@ -5,7 +5,7 @@
   },
   "settings": {
     "terminal.integrated.env.linux": {
-      "MY_API_KEY": "${{ secrets.MY_API_KEY }}"
+      "MISTRAL_API_KEY": "${{ secrets.MISTRAL_API_KEY }}"
     }
   }
 }
