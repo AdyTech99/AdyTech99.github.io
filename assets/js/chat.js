@@ -4,6 +4,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const sendButton = document.getElementById('send-button');
     const apiKey = process.env.MISTRAL_API_KEY; // Replace with your actual API key
 
+    addMessage('system', "Initialized")
+
     async function sendMessage() {
         const userMessage = userInput.value.trim();
         if (userMessage === '') return;
