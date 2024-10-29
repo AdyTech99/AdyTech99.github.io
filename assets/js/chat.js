@@ -3,9 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const userInput = document.getElementById('user-input');
     const sendButton = document.getElementById('send-button');
 
-    //const apiKey = process.env.MISTRAL_API_KEY; // Replace with your actual API key
-    import { MISTRAL_API_KEY } from './apiKey.js';
-    const apiKey = ${MISTRAL_API_KEY};
+    const apiKey = "CprFHbGhpWTfOG97dFBgRLi3OmRtUOA7" // Replace with your actual API key
 
     async function sendMessage() {
         const userMessage = userInput.value.trim();
