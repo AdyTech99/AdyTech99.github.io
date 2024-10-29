@@ -1,0 +1,36 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'
+
+      - name: Install dependencies (if needed)
+        run: npm install
+
+      - name: Create API key file
+        run: |
+          echo "const MISTRAL_API_KEY = '${{ secrets.MISTRAL_API_KEY }}';" > src/apiKey.js
+          echo "export { MISTRAL_API_KEY };" >> src/apiKey.js
+
+      - name: Build
+        run: npm run build  # Adjust this to your build command
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build  # Change this to your build output directory
