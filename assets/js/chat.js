@@ -31,7 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     'Authorization': `Bearer ${apiKey}`
                 },
                 body: JSON.stringify({
-                    model: 'mistral-large-latest',
+                    model: 'mistral-small-latest',
                     messages: conversationHistory
                 })
             });
