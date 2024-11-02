@@ -12,9 +12,6 @@ document.addEventListener('DOMContentLoaded', function() {
                          "- If the customer wants to report a bug, encourage them to either go to the Mod's GitHub from the GitHub link on the Modrinth sidebar, or to open a bug report from the Discord server: https://discord.gg/4eWX2duHfJ. " +
                          "Do not hallucinate. If the provided text does not contain the necessary information, politely inform the user that you don't have the answer and refer them to the Discord server for further assistance.";
 
-
-
-    // Update the initial conversation history with the system prompt
     let conversationHistory = [
         {
             role: 'system',
@@ -22,16 +19,73 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     ];
 
+    let embeddingCache = {};
 
-   /* let conversationHistory = [
-        {
-            role: 'system',
-            content: "You are a customer support agent. Your job is to direct the customer to the most appropriate resource location. You will be provided with a chunk of text along with the user's query. Use that text to give relevant and correct information" +
-                      "If the customer wishes to download a mod, provide them with the download link" +
-                      "If the customer has a question about how to use the mod, then based on the context given, answer it" +
-                      "If the customer wants to report a bug, encourage them to either go to the Mod's GitHub from the GitHub link on the Modrinth sidebar, or to open a bug report from the Discord server: https://discord.gg/4eWX2duHfJ"
+    // Function to load embeddings from a JSON file
+    async function loadEmbeddings() {
+        const response = await fetch('assets/rag/embeddings3.json'); // Adjust the path as needed
+        if (response.ok) {
+            embeddingCache = await response.json();
+        } else {
+            console.error('Failed to load embeddings:', response.statusText);
         }
-    ];*/
+    }
+
+    // Call this function when the application starts
+    loadEmbeddings();
+
+    async function fetchRelevantInfo(query) {
+        // Check if the embedding is already cached
+        if (embeddingCache[query]) {
+            return embeddingCache[query];
+        }
+
+        // If not cached, calculate similarity with all cached embeddings
+        let bestMatch = null;
+        let highestSimilarity = -1;
+        const queryEmbedding = await getEmbeddings(query); // Get embedding for the query
+        for (const [text, embedding] of Object.entries(embeddingCache)) {
+            const similarity = cosineSimilarity(queryEmbedding, embedding); // Calculate similarity
+
+            if (similarity > highestSimilarity) {
+                highestSimilarity = similarity;
+                bestMatch = text; // Store the best matching text
+            }
+        }
+
+        // If a good match is found, return the corresponding embedding
+        if (highestSimilarity > 0.5) { // You can adjust the threshold as needed
+            //return embeddingCache[bestMatch];
+            return bestMatch;
+        }
+
+        // If no relevant match found, return a default message
+        console.warn('No relevant information found for:', query);
+        return "No relevant information found.";
+    }
+
+    // Function to calculate cosine similarity
+    function cosineSimilarity(vecA, vecB) {
+        if (!Array.isArray(vecA) || !Array.isArray(vecB) || vecA.length !== vecB.length) {
+            return 0;
+        }
+        const dotProduct = vecA.reduce((acc, val, idx) => acc + val * vecB[idx], 0);
+        const magnitudeA = Math.sqrt(vecA.reduce((acc, val) => acc + val * val, 0));
+        const magnitudeB = Math.sqrt(vecB.reduce((acc, val) => acc + val * val, 0));
+        return dotProduct / (magnitudeA * magnitudeB);
+    }
+
+    async function sendMessage() {
+        const userMessage = userInput.value.trim();
+        if (userMessage === '') return;
+
+        conversationHistory.push({ role: 'user', content: userMessage });
+        addMessage('user', userMessage);
+        userInput.value = '';
+
+        const aiMessage = await getAiResponse(userMessage);
+        addMessage('ai', aiMessage);
+    }
 
     // Function to get embeddings from MistralAI
     async function getEmbeddings(text) {
@@ -51,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
             });
 
             if (!response.ok) {
-            //    throw new Error('Embedding request failed');
+            //throw new Error('Embedding request failed');
             }
 
             const data = await response.json();
@@ -64,85 +118,12 @@ document.addEventListener('DOMContentLoaded', function() {
             }
     }
 
-    // Function to retrieve relevant information from the knowledge base
-    async function fetchRelevantInfo(query) {
-        // Load the knowledge base document
-        const response = await fetch('assets/js/modinfo.txt');
-        const modInfoText = await response.text();
-
-        // Embed the entire knowledge base document
-            const documentEmbedding = await getEmbeddings(modInfoText);
-
-            // Split the document into chunks (e.g., by paragraph)
-            const chunks = modInfoText.split('\n\n'); // Adjust the delimiter as needed
-
-            // Embed the user query
-            const queryEmbedding = await getEmbeddings(query);
-
-            // Wait for one second before making the next embedding call
-            await new Promise(resolve => setTimeout(resolve, 1000));
-
-            let maxSimilarity = -1;
-            let mostRelevantChunk = "";
-
-            // Calculate similarity between the query and each chunk
-            for (const chunk of chunks) {
-                const chunkEmbedding = await getEmbeddings(chunk); // Use the entire document embedding for each chunk
-                const similarity = cosineSimilarity(queryEmbedding, chunkEmbedding);
-
-                if (similarity > maxSimilarity) {
-                    maxSimilarity = similarity;
-                    mostRelevantChunk = chunk;
-                }
-            }
-
-            // If no relevant chunk found, return a default message
-            if (maxSimilarity <= 0.5) {
-                return "No relevant information found.";
-            }
-
-            return mostRelevantChunk;
-        }
-
-    // Function to calculate cosine similarity
-    function cosineSimilarity(vecA, vecB) {
-        if (!Array.isArray(vecA) || !Array.isArray(vecB)) {
-            return 0;
-        }
-        const dotProduct = vecA.reduce((acc, val, idx) => acc + val * vecB[idx], 0);
-        const magnitudeA = Math.sqrt(vecA.reduce((acc, val) => acc + val * val, 0));
-        const magnitudeB = Math.sqrt(vecB.reduce((acc, val) => acc + val * val, 0));
-        return dotProduct / (magnitudeA * magnitudeB);
-    }
-
-    async function sendMessage() {
-        const userMessage = userInput.value.trim();
-        if (userMessage === '') return;
-
-        // Add user message to the conversation history
-        conversationHistory.push({ role: 'user', content: userMessage });
-
-        // Add user message to the chat
-        addMessage('user', userMessage);
-        userInput.value = '';
-
-        // Get AI response from Mistral AI API
-        const aiMessage = await getAiResponse(userMessage);
-        addMessage('ai', aiMessage);
-    }
-
     async function getAiResponse(message) {
         try {
-            // Fetch relevant information from the knowledge base
             const retrievedInfo = await fetchRelevantInfo(message);
 
-            // Add retrieved information to the conversation history
-            //conversationHistory.push({ role: 'system', content: retrievedInfo });
-
-            // Wait for one second before making the next API call
             await new Promise(resolve => setTimeout(resolve, 1280));
 
-            // Get AI response from Mistral AI API
             const response = await fetch('https://api.mistral.ai/v1/chat/completions', {
                 method: 'POST',
                 headers: {
@@ -153,7 +134,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 body: JSON.stringify({
                     model: 'mistral-small-latest',
                     messages: [{ role: 'system', content: retrievedInfo }, ...conversationHistory]
-                    //messages: conversationHistory
                 })
             });
 
@@ -164,13 +144,11 @@ document.addEventListener('DOMContentLoaded', function() {
             const data = await response.json();
             const aiMessage = data.choices[0].message.content.trim();
 
-            // Add AI message to the conversation history
             conversationHistory.push({ role: 'assistant', content: aiMessage });
 
-            return "retrieved info : " + retrievedInfo + "\n" + "\n" +  aiMessage;
+            return aiMessage;
         } catch (error) {
             console.error('Error:', error);
-            //return 'Sorry, something went wrong. Please try again later.';
             return "Sorry, something went wrong. Please try again later: " + error;
         }
     }
@@ -184,7 +162,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function parseMarkup(message) {
-        // Replace markup syntax with HTML tags
         message = message
             .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>') // **bold**
             .replace(/\*(.+?)\*/g, '<em>$1</em>') // *italic*
@@ -192,10 +169,7 @@ document.addEventListener('DOMContentLoaded', function() {
             .replace(/#(.+)/g, '<h1>$1</h1>') // #heading
             .replace(/\[([^\]]+)\]\(([^\)]+)\)/g, '<a style="color:white" href="$2" target="_blank">$1</a>'); // [Text here](https://example.com)
 
-        // Replace line breaks with <br> tags
         message = message.replace(/\n/g, '<br>');
-
-        // Wrap paragraphs in <p> tags
         message = message.replace(/(<br>){2,}/g, '</p><p>');
         message = '<p>' + message + '</p>';
 
@@ -205,14 +179,12 @@ document.addEventListener('DOMContentLoaded', function() {
     userInput.addEventListener('keydown', function(event) {
         if (event.key === 'Enter') {
             if (event.shiftKey) {
-                // Insert a new line if Shift+Enter is pressed
                 event.preventDefault();
                 const start = userInput.selectionStart;
                 const end = userInput.selectionEnd;
                 userInput.value = userInput.value.substring(0, start) + '\n' + userInput.value.substring(end);
                 userInput.selectionStart = userInput.selectionEnd = start + 1;
             } else {
-                // Send the message if Enter is pressed without Shift
                 sendMessage();
             }
         }
