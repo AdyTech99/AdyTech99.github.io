@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Function to load embeddings from a JSON file
     async function loadEmbeddings() {
-        const response = await fetch('assets/rag/embeddings3.json'); // Adjust the path as needed
+        const response = await fetch('assets/rag/embeddings4.json'); // Adjust the path as needed
         if (response.ok) {
             embeddingCache = await response.json();
         } else {
@@ -36,6 +36,48 @@ document.addEventListener('DOMContentLoaded', function() {
     loadEmbeddings();
 
     async function fetchRelevantInfo(query) {
+        await new Promise(resolve => setTimeout(resolve, 1280));
+
+        const searchResponse = await fetch('https://api.mistral.ai/v1/chat/completions', {
+        method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json',
+                'Authorization': `Bearer ${apiKey}`
+            },
+            body: JSON.stringify({
+                model: 'mistral-small-latest',
+                messages: [{ role: 'system', content: "You are a search engine. Your job is to take the customer's Minecraft Mod related conversation as input, and respond with search keywords that is suited for searching a database and answering the questions" +
+                "You will also be provided with the conversation history to serve as context for user's latest query." +
+                 "If the message is not a query, then return 0. If the message is already suitable as a search query, then repeat the message" +
+                 "# Examples: " +
+                 "User query: I want health indicator" +
+                 "Your output: Download Health Indicator Mod" +
+                 "" +
+                 "User query: My keybind won't turn off" +
+                 "Your output: Turn Off Keybind" +
+                 "" +
+                 "User query: How are you" +
+                 "Your output: 0" +
+                 "" +
+                 "User query: I like the Automatic Infinite Elytra music" +
+                 "Your output: Automatic Infinite Elytra music creator" +
+                 "" +
+                 "User query: Where can I download No Durability" +
+                 "Your output:  Download No Durability Mod"
+                 },
+                 ...conversationHistory,
+                {role: 'user', content: "latest query: " + query}],
+                temperature: 0
+            })
+        });
+
+        const data = await searchResponse.json();
+        const aiSearchResponse = data.choices[0].message.content.trim();
+        query = aiSearchResponse
+
+        //return query;
+
         // Check if the embedding is already cached
         if (embeddingCache[query]) {
             return embeddingCache[query];
@@ -134,7 +176,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 },
                 body: JSON.stringify({
                     model: 'mistral-small-latest',
-                    messages: [{ role: 'system', content: retrievedInfo }, ...conversationHistory]
+                    messages: [{ role: 'system', content: retrievedInfo }, ...conversationHistory],
+                    temperature: 0
                 })
             });
 
@@ -144,9 +187,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
             const data = await response.json();
             const aiMessage = data.choices[0].message.content.trim();
-
             conversationHistory.push({ role: 'assistant', content: aiMessage });
 
+            //return "Retreiveld: " + retrievedInfo + "End or fjreoijiofjd: " + "\n \n" + aiMessage;
             return aiMessage;
         } catch (error) {
             console.error('Error:', error);

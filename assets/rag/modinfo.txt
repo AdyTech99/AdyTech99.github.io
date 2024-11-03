@@ -2,7 +2,7 @@ All mods are created and maintained by AdyTech99, for Minecraft: Java Edition. I
 
 
 # Download Locations:
-Download Health Indicators: https://modrinth.com/health-indicators 
+Download Health Indicators: https://modrinth.com/health-indicators
 Download No Durability: https://modrinth.com/mod/nodurability 
 Download Farlands Reborn: https://modrinth.com/mod/farlands-reborn 
 Download Automatic Infinite Elytra: https://modrinth.com/mod/automatic-infinite-elytra 
@@ -10,15 +10,15 @@ Download Manhunt Compass: https://modrinth.com/mod/minecraft-manhunt-compass
 Download Configurable Beacons: https://modrinth.com/mod/configurable-beacons 
 Download any other mod: direct them to the general profile: https://modrinth.com/user/AdyTech99
 
-# An In-Depth Exploration of the Minecraft Health Indicator Mod
-Minecraft, a game renowned for its creativity and expansive world, has a vibrant modding community that continually enhances the gameplay experience. One such mod that stands out is the Health Indicator Mod, which introduces a dynamic health display system for players and entities within the game. This essay delves into the features, functionalities, and quality-of-life improvements offered by this mod, highlighting how it enriches the Minecraft experience.
+# An In-Depth Exploration of the Minecraft Health Indicators Mod
+Minecraft, a game renowned for its creativity and expansive world, has a vibrant modding community that continually enhances the gameplay experience. One such mod that stands out is the Health Indicators Mod, which introduces a dynamic health display system for players and entities within the game. This essay delves into the features, functionalities, and quality-of-life improvements offered by this mod, highlighting how it enriches the Minecraft experience.
 
-## Overview of the Health Indicator Mod
-The Health Indicator Mod is designed to provide players with a visual representation of the health status of other players and entities in the game. By displaying health bars above their heads, players can quickly assess the condition of their surroundings, which is particularly useful in combat situations or when interacting with various creatures. The mod is highly configurable, allowing players to tailor the health indicators to their preferences and gameplay style.
+## Overview of the Health Indicators Mod
+The Health Indicators Mod is designed to provide players with a visual representation of the health status of other players and entities in the game. By displaying health bars above their heads, players can quickly assess the condition of their surroundings, which is particularly useful in combat situations or when interacting with various creatures. The mod is highly configurable, allowing players to tailor the health indicators to their preferences and gameplay style.
 
 ## Key Features
 ### Configurable Health Indicators
-At the core of the mod is its highly customizable health indicator system. Players can enable or disable visibility based on several filters, ensuring that the health bars are displayed only for the entities they are interested in. The filters include:
+At the core of the mod is its highly customizable Health Indicators system. Players can enable or disable visibility based on several filters, ensuring that the health bars are displayed only for the entities they are interested in. The filters include:
 - **Entity Categories**: Players can choose to display health indicators for different categories of entities, such as Hostile, Passive, Players, or Self. This feature allows for a more focused gameplay experience, as players can filter out unnecessary information.
   - **Entity Types**: The mod supports specific entity types, enabling players to display health indicators for particular mobs, such as `minecraft:pig` or `aether:aerbunny`. This level of specificity is beneficial for players who may want to track the health of certain creatures during gameplay.
 - **Player Names**: Players can opt to show health indicators for specific players, making it easier to monitor allies or rivals in multiplayer scenarios.
@@ -33,9 +33,9 @@ Beyond the basic functionality, the mod offers a plethora of customization optio
 - **Text Color**: Players can customize the color of the health text, adding a personal touch to the indicators.
 
 ### Quality of Life Features
-The Health Indicator Mod also includes several quality-of-life features that enhance the overall gameplay experience:
+The Health Indicators Mod also includes several quality-of-life features that enhance the overall gameplay experience:
 - **Dynamic Texture Changes**: The health indicators change texture and appearance based on the effects affecting the entity, similar to the vanilla game mechanics. For instance, the indicator turns green if the entity is poisoned, black if they are withering, and displays yellow hearts for absorption. This feature provides immediate visual feedback on the status of entities.
-- **Vibration Effects**: If an entity has regeneration effects, the health indicator vibrates, drawing attention to its improved health status.
+- **Vibration Effects**: If an entity has regeneration effects, the Health Indicators vibrates, drawing attention to its improved health status.
 - **Hardcore Mode Textures**: The mod includes special textures for entities in Hardcore mode, adding an extra layer of immersion for players seeking a more challenging experience.
 
 ### Keybinds and Accessibility
@@ -60,13 +60,13 @@ The mod's configuration options are extensive, allowing players to tailor their 
 The mod may have problems in showing health of mobs from other mods. Furthermore, some servers like PvPLegacy implement an anti-cheat that causes this mod to break.
 
 ## Impact on Gameplay
-The introduction of the Health Indicator Mod significantly alters the way players interact with the Minecraft world. By providing immediate visual feedback on the health status of entities, players can make more informed decisions during combat, exploration, and resource gathering. This mod enhances strategic gameplay, as players can quickly assess whether to engage or retreat based on the health indicators displayed.
+The introduction of the Health Indicators Mod significantly alters the way players interact with the Minecraft world. By providing immediate visual feedback on the health status of entities, players can make more informed decisions during combat, exploration, and resource gathering. This mod enhances strategic gameplay, as players can quickly assess whether to engage or retreat based on the health indicators displayed.
 
 In PvP scenarios, the ability to see an opponent's health can shift the balance of power, allowing players to strategize their attacks more effectively. Similarly, in cooperative play, players can monitor the health of their allies, ensuring that they provide support when needed. The mod fosters a more dynamic and engaging multiplayer experience, where awareness of health status becomes a crucial element of gameplay.
 
 ## Conclusion
-The Health Indicator Mod for Minecraft is a remarkable enhancement that brings a wealth of features and customization options to the game. By displaying health bars above players and entities, the mod provides essential information that can significantly impact gameplay decisions. Its highly configurable nature allows players to tailor the experience to their liking, ensuring that the mod fits seamlessly into their individual playstyles.
-With quality-of-life features such as dynamic texture changes, customizable keybinds, and extensive configuration options, the Health Indicator Mod not only improves the visual experience but also enhances the overall strategic depth of Minecraft. As players continue to explore the vast possibilities within the game, mods like this one play a vital role in keeping the experience fresh, engaging, and tailored to the diverse preferences of the Minecraft community. Whether in single-player or multiplayer settings, the Health Indicator Mod stands out as a valuable tool for any player looking to enhance their Minecraft adventure.
+The Health Indicators Mod for Minecraft is a remarkable enhancement that brings a wealth of features and customization options to the game. By displaying health bars above players and entities, the mod provides essential information that can significantly impact gameplay decisions. Its highly configurable nature allows players to tailor the experience to their liking, ensuring that the mod fits seamlessly into their individual playstyles.
+With quality-of-life features such as dynamic texture changes, customizable keybinds, and extensive configuration options, the Health Indicators Mod not only improves the visual experience but also enhances the overall strategic depth of Minecraft. As players continue to explore the vast possibilities within the game, mods like this one play a vital role in keeping the experience fresh, engaging, and tailored to the diverse preferences of the Minecraft community. Whether in single-player or multiplayer settings, the Health Indicators Mod stands out as a valuable tool for any player looking to enhance their Minecraft adventure.
 
 
 
